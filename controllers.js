@@ -1,7 +1,7 @@
 import connection from "./db.js";
 
 const showfunction = async (req, res) => {
-    const ans = await connection.query('SELECT * FROM product_info')
+    const ans = await connection.query('SELECT * FROM users')
         .catch(err => { console.log(err); })
     res.send(ans[0])
 }
