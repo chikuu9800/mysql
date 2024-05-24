@@ -10,11 +10,11 @@ const addfunction = async (req, res) => {
 
     const name = req.body.name
     const email = req.body.email
-    const mobile = req.body.mobile
+  
 
 
 
-    const ans = await connection.query(`INSERT INTO users ( name , email ) VALUES (?,?,?)  `, [name, email, mobile])
+    const ans = await connection.query(`INSERT INTO users ( name , email ) VALUES (?,?)  `, [name, email])
 
         .catch(err => { console.log(err); })
     // res.send(console.log(req.body) )
